@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160622061050) do
+ActiveRecord::Schema.define(version: 20160622093118) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -124,7 +124,7 @@ ActiveRecord::Schema.define(version: 20160622061050) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string   "name",                   null: false
-    t.text     "address"
+    t.string   "address"
     t.string   "phone_number"
     t.integer  "restaurant_category_id"
     t.datetime "created_at",             null: false
