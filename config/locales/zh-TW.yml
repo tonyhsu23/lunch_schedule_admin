@@ -1,6 +1,15 @@
 "zh-TW":
   active_admin:
-    dashboard: 儀表板
+    model:
+      password: "密碼"
+      password_confirm: "密碼確認"
+      name: "名稱"
+      address: "地址"
+      company: "公司"
+      department: "部門"
+      restaurant_category: "餐廳種類"
+      dish_category: "菜餚種類"
+    dashboard: "儀表板"
     dashboard_welcome:
       welcome: "歡迎來到 Active Admin，這是預設的儀表板頁面。"
       call_to_action: "要新增儀表板內容，請查看 'app/admin/dashboard.rb'"

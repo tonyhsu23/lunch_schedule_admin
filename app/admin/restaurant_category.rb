@@ -1,4 +1,5 @@
 ActiveAdmin.register RestaurantCategory do
+  menu label: I18n.t("active_admin.model.restaurant_category"), priority: 5
   permit_params :name
 
   index do
@@ -10,8 +11,8 @@ ActiveAdmin.register RestaurantCategory do
   end
 
   form do |f|
-    f.inputs "Restaurant Category" do
-      f.input :name
+    f.inputs I18n.t("active_admin.model.restaurant_category") do
+      f.input :name, label: I18n.t("active_admin.model.name")
     end
     f.actions
   end

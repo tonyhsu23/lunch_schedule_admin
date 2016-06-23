@@ -1,4 +1,5 @@
 ActiveAdmin.register Department do
+  menu label: I18n.t("active_admin.model.department"), priority: 4
   permit_params :name, :company_id
 
   index do
@@ -10,9 +11,9 @@ ActiveAdmin.register Department do
   end
 
   form do |f|
-    f.inputs "Department" do
-      f.input :company, as: :select
-      f.input :name
+    f.inputs I18n.t("active_admin.model.department") do
+      f.input :company, as: :select, label: I18n.t("active_admin.model.company")
+      f.input :name, label: I18n.t("active_admin.model.name") 
     end
     f.actions
   end

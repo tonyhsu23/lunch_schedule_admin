@@ -1,4 +1,5 @@
 ActiveAdmin.register DishCategory do
+  menu label: I18n.t("active_admin.model.dish_category"), priority: 6
   permit_params :name
 
   index do
@@ -9,8 +10,8 @@ ActiveAdmin.register DishCategory do
   end
 
   form do |f|
-    f.inputs "Dish Category" do
-      f.input :name
+    f.inputs I18n.t("active_admin.model.dish_category") do
+      f.input :name, label: I18n.t("active_admin.model.name")
     end
     f.actions
   end
