@@ -1,5 +1,5 @@
 ActiveAdmin.register Company do
-  menu label: I18n.t("active_admin.model.company") , priority: 3
+  menu priority: 3
   permit_params :name, :address
 
   index do
@@ -11,9 +11,9 @@ ActiveAdmin.register Company do
   end
 
   form do |f|
-    f.inputs I18n.t("active_admin.model.company") do
-      f.input :name, label: I18n.t("active_admin.model.name") 
-      f.input :address, label: I18n.t("active_admin.model.address")
+    f.inputs I18n.t("activerecord.models.company") do
+      f.input :name
+      f.input :address
     end
     f.actions
   end

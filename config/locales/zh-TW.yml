@@ -1,6 +1,43 @@
 "zh-TW":
+  activerecord:
+    models:
+      admin_user: "管理員"
+      company: "公司"
+      department: "部門"
+      restaurant_category: "餐廳種類"
+      dish_category: "菜餚種類"
+    attributes:
+      admin_user:
+        password: "密碼"
+        password_confirmation: "密碼確認"
+        current_sign_in_at: "登入時間" 
+        current_sign_in_ip: "登入 IP" 
+        last_sign_in_at: "上次登入時間" 
+        last_sign_in_ip: "上次登入 IP" 
+        sign_in_count: "登入次數" 
+        created_at: "建立時間" 
+        updated_at: "更新時間" 
+      company:
+        name: "名稱"
+        address: "地址"
+        created_at: "建立時間" 
+        updated_at: "更新時間" 
+      department:
+        company: "公司"
+        name: "名稱"
+        created_at: "建立時間" 
+        updated_at: "更新時間" 
+      restaurant_category:
+        name: "名稱"
+        created_at: "建立時間" 
+        updated_at: "更新時間" 
+      dish_category:
+        name: "名稱"
+        created_at: "建立時間" 
+        updated_at: "更新時間" 
   active_admin:
     model:
+      admin_user: "管理員"
       password: "密碼"
       password_confirm: "密碼確認"
       name: "名稱"

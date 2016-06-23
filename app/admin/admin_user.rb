@@ -1,5 +1,5 @@
 ActiveAdmin.register AdminUser do
-  menu label: "管理員", priority: 2
+  menu priority: 2
   permit_params :email, :password, :password_confirmation
 
   index do
@@ -18,11 +18,10 @@ ActiveAdmin.register AdminUser do
   filter :created_at
 
   form do |f|
-    f.inputs "Admin Details" do
+    f.inputs I18n.t("activerecord.models.admin_user") do
       f.input :email
-      f.input :password, label: I18n.t("active_admin.model.password")
-      f.input :password_confirmation,
-        label: I18n.t("active_admin.model.password_confirm")
+      f.input :password
+      f.input :password_confirmation
     end
     f.actions
   end
