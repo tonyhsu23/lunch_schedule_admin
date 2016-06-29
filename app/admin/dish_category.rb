@@ -1,5 +1,5 @@
 ActiveAdmin.register DishCategory do
-  menu priority: 6
+  menu priority: 7
   permit_params :name
 
   index do

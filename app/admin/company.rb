@@ -1,5 +1,5 @@
 ActiveAdmin.register Company do
-  menu priority: 3
+  menu priority: 4
   permit_params :name, :address
 
   index do
