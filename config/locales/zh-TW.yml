@@ -6,8 +6,21 @@
       department: "部門"
       restaurant_category: "餐廳種類"
       dish_category: "菜餚種類"
+      user: "員工"
     attributes:
       admin_user:
+        password: "密碼"
+        password_confirmation: "密碼確認"
+        current_sign_in_at: "登入時間" 
+        current_sign_in_ip: "登入 IP" 
+        last_sign_in_at: "上次登入時間" 
+        last_sign_in_ip: "上次登入 IP" 
+        sign_in_count: "登入次數" 
+        created_at: "建立時間" 
+        updated_at: "更新時間" 
+      user:
+        company: "公司"
+        department: "部門"
         password: "密碼"
         password_confirmation: "密碼確認"
         current_sign_in_at: "登入時間" 
