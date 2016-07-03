@@ -5,14 +5,14 @@ ActiveAdmin.register Department do
   index do
     id_column
     column :name
-    column :company_id
+    column :company
     column :created_at
     column :updated_at
   end
 
   form do |f|
     f.inputs I18n.t("activerecord.models.department") do
-      f.input :company, as: :select
+      f.input :company, as: :select, include_blank: false
       f.input :name
     end
     f.actions

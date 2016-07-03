@@ -9,6 +9,14 @@ class User < ActiveRecord::Base
   has_many :events, through: :event_people
   has_many :event_people
 
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
+  def chinese_full_name
+    "#{chinese_last_name} #{chinese_first_name}"
+  end
+
   def self.colleagues(company_id)
     where(company_id: company_id)
     .pluck(:id)

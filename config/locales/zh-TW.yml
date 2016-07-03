@@ -21,6 +21,11 @@
       user:
         company: "公司"
         department: "部門"
+        chinese_first_name: "名字"
+        chinese_last_name: "姓氏"
+        is_serving: "是否在職"
+        company_id: "所屬公司"
+        department_id: "所屬部門"
         password: "密碼"
         password_confirmation: "密碼確認"
         current_sign_in_at: "登入時間" 
@@ -50,15 +55,7 @@
         updated_at: "更新時間" 
   active_admin:
     model:
-      admin_user: "管理員"
-      password: "密碼"
-      password_confirm: "密碼確認"
-      name: "名稱"
-      address: "地址"
-      company: "公司"
-      department: "部門"
-      restaurant_category: "餐廳種類"
-      dish_category: "菜餚種類"
+      chinese_full_name: "姓名"
     dashboard: "儀表板"
     dashboard_welcome:
       welcome: "歡迎來到 Active Admin，這是預設的儀表板頁面。"
