@@ -8,6 +8,7 @@ ActiveAdmin.register Company do
     column :address
     column :created_at
     column :updated_at
+    actions
   end
 
   form do |f|
