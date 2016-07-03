@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   end
 
   def chinese_full_name
-    "#{chinese_last_name} #{chinese_first_name}"
+    "#{chinese_last_name}#{chinese_first_name}"
   end
 
   def self.colleagues(company_id)

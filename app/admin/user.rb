@@ -44,5 +44,5 @@ ActiveAdmin.register User do
     f.actions
   end
 
-  show :title => proc{ |user| user.full_name }
+  show :title => proc{ |user| "#{user.chinese_full_name} #{user.full_name}" }
 end
