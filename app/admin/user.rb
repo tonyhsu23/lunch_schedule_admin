@@ -39,10 +39,33 @@ ActiveAdmin.register User do
       f.input :email
       f.input :password
       f.input :password_confirmation
-      f.input :is_serving, as: :select, include_blank: false
+      f.input :is_serving, as: :select, include_blank: false,
+        collection: [[I18n.t('active_admin.status_tag.yes'), true],
+                     [I18n.t('active_admin.status_tag.no'), false]]
     end
     f.actions
   end
 
-  show :title => proc{ |user| "#{user.chinese_full_name} #{user.full_name}" }
+  show title: proc{ |user| "#{user.chinese_full_name} #{user.full_name}" } do
+    attributes_table do
+      row :id
+      row :email
+      row :sign_in_count
+      row :current_sign_in_at
+      row :last_sign_in_at
+      row :current_sign_in_ip
+      row :last_sign_in_ip
+      row :created_at
+      row :updated_at
+      row :first_name
+      row :last_name
+      row :chinese_first_name
+      row :chinese_last_name
+      row :is_serving do |user|
+        user.is_serving ? status_tag('yes') : status_tag('no')
+      end
+      row :company
+      row :department
+    end
+  end
 end
