@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160622093118) do
+ActiveRecord::Schema.define(version: 20160709091028) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -79,10 +79,12 @@ ActiveRecord::Schema.define(version: 20160622093118) do
     t.integer  "dish_category_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.integer  "restaurant_id"
   end
 
   add_index "dishes", ["dish_category_id"], name: "index_dishes_on_dish_category_id"
   add_index "dishes", ["name"], name: "index_dishes_on_name"
+  add_index "dishes", ["restaurant_id"], name: "index_dishes_on_restaurant_id"
 
   create_table "event_dishes", force: :cascade do |t|
     t.integer  "event_id"
