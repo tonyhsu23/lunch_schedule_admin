@@ -12,6 +12,9 @@
       user: "員工"
     attributes:
       admin_user:
+        company_id: "公司"
+        company: "公司"
+        role: "角色"
         password: "密碼"
         password_confirmation: "密碼確認"
         current_sign_in_at: "登入時間" 
