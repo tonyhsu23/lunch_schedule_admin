@@ -1,5 +1,5 @@
 ActiveAdmin.register Company do
-  menu priority: 3
+  menu priority: 3, if: proc{ current_admin_user.super_admin? }
   permit_params :name, :address
 
   index do

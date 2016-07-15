@@ -1,5 +1,5 @@
 ActiveAdmin.register DishCategory do
-  menu priority: 7
+  menu priority: 7, if: proc{ current_admin_user.super_admin? }
   permit_params :name
 
   index do

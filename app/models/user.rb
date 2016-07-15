@@ -17,8 +17,11 @@ class User < ActiveRecord::Base
     "#{chinese_last_name}#{chinese_first_name}"
   end
 
-  def self.colleagues(company_id)
+  def self.by_company(company_id)
     where(company_id: company_id)
-    .pluck(:id)
+  end
+
+  def self.colleagues(company_id)
+    where(company_id: company_id).pluck(:id)
   end
 end

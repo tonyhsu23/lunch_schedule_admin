@@ -1,8 +1,19 @@
 ActiveAdmin.register User do
-  menu priority: 5
+  menu priority: 5, if: proc{ !current_admin_user.super_admin? }
   permit_params :email, :password, :password_confirmation,
     :company_id, :department_id, :first_name, :last_name,
     :chinese_first_name, :chinese_last_name, :is_serving
+
+  controller do
+    def scoped_collection
+      company_id = current_admin_user.company_id
+      if company_id.present?
+        super.by_company(company_id)
+      else
+        super.all
+      end
+    end
+  end
 
   index do
     selectable_column
@@ -30,8 +41,9 @@ ActiveAdmin.register User do
 
   form do |f|
     f.inputs I18n.t('activerecord.models.admin_user') do
-      f.input :company, include_blank: false
-      f.input :department, include_blank: false
+      f.hidden_field :company
+      f.input :department, include_blank: false,
+        collection: Department.by_company(current_admin_user.company_id)
       f.input :last_name
       f.input :first_name
       f.input :chinese_last_name
