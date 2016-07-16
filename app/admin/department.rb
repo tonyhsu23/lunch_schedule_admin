@@ -1,5 +1,5 @@
 ActiveAdmin.register Department do
-  menu priority: 4, if: proc{ !current_admin_user.super_admin? }
+  menu priority: 4
   permit_params :name, :company_id
   
   controller do

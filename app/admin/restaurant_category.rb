@@ -1,5 +1,5 @@
 ActiveAdmin.register RestaurantCategory do
-  menu priority: 6, if: proc{ current_admin_user.super_admin? }
+  menu priority: 6
   permit_params :name
 
   index do

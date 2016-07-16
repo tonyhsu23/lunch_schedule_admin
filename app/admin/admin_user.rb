@@ -1,5 +1,5 @@
 ActiveAdmin.register AdminUser do
-  menu priority: 2, if: proc{ current_admin_user.super_admin? }
+  menu priority: 2
   permit_params :email, :password, :password_confirmation, :company_id, :role
 
   index do
