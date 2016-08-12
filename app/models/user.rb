@@ -20,8 +20,4 @@ class User < ActiveRecord::Base
   def self.by_company(company_id)
     where(company_id: company_id)
   end
-
-  def self.colleagues(company_id)
-    where(company_id: company_id).pluck(:id)
-  end
 end
