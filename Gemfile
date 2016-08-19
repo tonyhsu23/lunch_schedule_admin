@@ -14,8 +14,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'activeadmin', '1.0.0.pre2'
 gem 'devise', '~> 3.2'
 gem 'cancan'
+gem 'mysql2'
+gem 'dotenv'
 
 group :development, :test do
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rbenv'
   gem 'pry'
   gem 'byebug'
 end
