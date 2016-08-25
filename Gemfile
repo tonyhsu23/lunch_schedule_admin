@@ -16,6 +16,7 @@ gem 'devise', '~> 3.2'
 gem 'cancan'
 gem 'mysql2'
 gem 'dotenv'
+gem 'paperclip', '~> 5.0.0'
 
 group :development, :test do
   gem 'capistrano'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160812054908) do
+ActiveRecord::Schema.define(version: 20160823123212) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -84,6 +84,18 @@ ActiveRecord::Schema.define(version: 20160812054908) do
   end
 
   add_index "dish_categories", ["name"], name: "index_dish_categories_on_name"
+
+  create_table "dish_images", force: :cascade do |t|
+    t.integer  "dish_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  add_index "dish_images", ["dish_id"], name: "index_dish_images_on_dish_id"
 
   create_table "dishes", force: :cascade do |t|
     t.string   "name",             null: false
